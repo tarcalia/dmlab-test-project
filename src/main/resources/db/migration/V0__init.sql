@@ -1,0 +1,14 @@
+CREATE TABLE t_day (
+    datetime DATE NOT NULL PRIMARY KEY,
+    tempmax DOUBLE PRECISION NOT NULL,
+    tempmin DOUBLE PRECISION NOT NULL,
+    temp DOUBLE PRECISION NOT NULL,
+    feelslike DOUBLE PRECISION NOT NULL,
+    snow DOUBLE PRECISION,
+    windspeed DOUBLE PRECISION,
+    sunrise TIME,
+    sunset TIME,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_at TIMESTAMP,
+    version BIGINT
+);
