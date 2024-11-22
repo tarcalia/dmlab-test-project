@@ -1,0 +1,16 @@
+quarkus:
+  rest-client:
+    "com.github.tarcalia.dmlabtestproject.client.WeatherRestClient":
+      url: "https://weather.visualcrossing.com"
+  cache:
+    caffeine:
+      weather-cache:
+        expire-after-write: ${WEATHER_CACHE_EXPIRE_TIME:30M}
+        maximum-size: ${WEATHER_CACHE_MAXIMUM-SIZE:100}
+  flyway:
+    migrate-at-start: true
+    schemas: public
+weather:
+  location: ${WEATHER_LOCATION:Dublin}
+  api-key: ${API_KEY:REPLACE_ME_FROM_EMAIL}
+  snow: ${SNOW_CRITERIA:1}
