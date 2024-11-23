@@ -23,13 +23,13 @@ public class WeatherResource {
     }
 
     @GET
-    @Path("/snowy")
+    @Path("/snowy-days")
     public Long getSnowyDays() {
         return weatherService.countSnowyDays();
     }
 
     @GET
-    @Path("/sun")
+    @Path("/sunlight-stats")
     public SunTimeStats getSunLightTime() {
         return weatherService.calculateSunlightTimes();
     }
